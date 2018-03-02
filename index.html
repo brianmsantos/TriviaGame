@@ -5,70 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stlyesheet" href="assets/css/style.css">
+    <title>Trivia</title>
 </head>
 
 <body>
     <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Trivia</h1>
+        </div>
+    </div>
+
+    <div class="container start_screen">
+        <div class="text-center">
+            <button type="button" id="start_button" class="btn btn-primary btn-lg">Start</button>
+        </div>
+    </div>
+
+    <div class="container game_over">
+        <div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h3 id="correct_count">Correct:</h3>
+                    <h3 id="incorrect_count">Incorrect:</h3>
+                    <h3 id="unanswered_count">Unanswered:</h3>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container game_content">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Totes Trivia</h1>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>Time remaining goes here</h2>
-                        <form>
-                            <h1>Here is question 1</h1>
-                            <div>
-                                <input type="radio" id="answer1" name="contact" value="email">
-                                <label for="answer1">answer1</label>
+            <div class="col-md-6" <h3 class="display-1">Time Remaining:</h3>
+            </div>
+            <div class="col-md-6">
+                <span id="time"></span>
+            </div>
+        </div>
+    </div>
 
-                                <input type="radio" id="answer2" name="contact" value="phone">
-                                <label for="answer2">answer2</label>
-
-                                <input type="radio" id="answer3" name="contact" value="mail">
-                                <label for="answer3">answer3</label>
-                            </div>
-                            <div>
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
-                        <form>
-                            <h1>Here is question 1</h1>
-                            <div>
-                                <input type="radio" id="answer1" name="contact" value="email">
-                                <label for="answer1">answer1</label>
-
-                                <input type="radio" id="answer2" name="contact" value="phone">
-                                <label for="answer2">answer2</label>
-
-                                <input type="radio" id="answer3" name="contact" value="mail">
-                                <label for="answer3">answer3</label>
-                            </div>
-                            <div>
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
-                        <form>
-                            <h1>Here is question 1</h1>
-                            <div>
-                                <input type="radio" id="answer1" name="contact" value="email">
-                                <label for="answer1">answer1</label>
-
-                                <input type="radio" id="answer2" name="contact" value="phone">
-                                <label for="answer2">answer2</label>
-
-                                <input type="radio" id="answer3" name="contact" value="mail">
-                                <label for="answer3">answer3</label>
-                            </div>
-                            <div>
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+    <div class="container game_content">
+        <div class="row">
+            <div class="col">
+                <p>In the key of C Ionian(Major), what is the root note of the dominant chord?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="a1q1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="a1q1">D</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="a2q1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="a2q1">#E</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="a3q1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="a3q1">A</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="true" id="a4q1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="a4q1">G</label>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container game_content">
+        <div class="row">
+            <div class="col">
+                <p>Which note below would make a G Major triad dominant?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="a1q2" name="customRadio2" class="custom-control-input">
+                    <label class="custom-control-label" for="a1q2">bB</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="true" id="a2q2" name="customRadio2" class="custom-control-input">
+                    <label class="custom-control-label" for="a2q2">F</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="a3q2" name="customRadio2" class="custom-control-input">
+                    <label class="custom-control-label" for="a3q2">A</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="a4q2" name="customRadio2" class="custom-control-input">
+                    <label class="custom-control-label" for="a4q2">C</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
